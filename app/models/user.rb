@@ -1,14 +1,5 @@
 class User < ActiveRecord::Base
-  # TODO implement association for User model. See user_spec.rb for specification.
-  
-
-  # TODO Implement validation for User model. See user_spec.rb for specification.
-  
-
-  # TODO Implement an after_create callback -- welcome_status
-  
-
-  def welcome_status
-    # TODO Should create a new Status after a user is created.  See user_spec.rb for more tips 
-  end
+has_many :comments
+has_many :posts
+has_one :status
 end
