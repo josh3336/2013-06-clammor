@@ -3,7 +3,10 @@ class User < ActiveRecord::Base
 	validates :email, uniqueness: true
 	has_many :comments
 	has_many :posts
+	has_many :subscriptions
+	has_many :groups, through: :subscriptions
 	has_one :status
+	belongs_to :group
 end
 
 
